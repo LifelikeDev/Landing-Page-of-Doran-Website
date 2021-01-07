@@ -1,0 +1,1127 @@
+/****** Global variables ******/
+:root {
+  --white-txt: rgba(255, 255, 255, 1);
+  --mid-light-txt: rgba(255, 255, 255, 0.92);
+  --light-txt: rgba(255, 255, 255, 0.5);
+  --light-green-txt: rgb(101, 214, 145);
+  --accent-green-txt: rgb(33, 185, 109);
+  --main-bg-clr: rgba(32, 14, 4, 1);
+  --light-bg-clr: rgb(53, 36, 26);
+  --rpt-border-radius: 10px;
+}
+
+/***** Global reset *****/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%; /* 10px */
+}
+body {
+  background: var(--main-bg-clr);
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button:hover {
+  box-shadow: inset 0 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* button:hover {
+     box-shadow: -5px -5px 5px rgb(0, 0, 0);
+} */
+
+/***** Header ********/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: var(--main-bg-clr);
+}
+.header-layer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 92%;
+  min-width: 92%;
+  height: 8rem;
+  /* padding: 1rem auto; */
+  margin: auto;
+}
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  min-width: 40%;
+  /* background: yellowgreen; */
+}
+.logo {
+  width: 10%;
+  min-width: 10%;
+  /* background: grey; */
+}
+.logo-name {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.logo-name span {
+  color: var(--light-txt);
+  font-weight: 300;
+}
+.nav {
+  min-width: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8rem;
+}
+.nav a {
+  color: var(--light-txt);
+  width: 6rem;
+  margin-right: 4rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.nav a:nth-child(2) {
+  margin-right: 7rem;
+}
+.nav a:hover {
+  color: var(--white-txt);
+}
+.chat button {
+  padding: 12px 22px;
+  background-color: var(--light-green-txt);
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.hamburger p {
+  cursor: pointer;
+  font-size: 2.3rem;
+  color: var(--white-txt);
+  display: none;
+  padding-left: 2.5rem;
+  position: relative;
+  left: -0.9em;
+}
+section {
+  width: 87%;
+  margin: 7rem auto;
+}
+section.intro {
+  height: 80rem;
+  color: var(--white-txt);
+
+  /* background: rgba(101, 214, 144, 0.466); */
+}
+.wrapper-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  place-items: center;
+}
+.text-head p {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+.text-green {
+  color: var(--accent-green-txt);
+}
+.italic {
+  font-style: italic;
+  font-weight: 400;
+}
+.text-main {
+  font-size: 7.3rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.text-sub {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--light-txt);
+}
+.text-sub span {
+  color: var(--white-txt);
+}
+.intro-img img {
+  width: 100%;
+  height: 100%;
+}
+section.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-bg-clr);
+  height: 55rem;
+  border-radius: var(--rpt-border-radius);
+  width: 92%;
+  margin-bottom: 14rem;
+}
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92%;
+}
+.left-text {
+  width: 40rem;
+  color: var(--white-txt);
+}
+.left-text p {
+  font-size: 7rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.right-text {
+  width: 55rem;
+  color: var(--light-txt);
+  height: 20rem;
+}
+.right-text p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 2.5rem;
+}
+.right-text p.second {
+  margin-bottom: 0;
+}
+section.fields {
+  height: 70rem;
+  width: 92%;
+  /* background: rgba(153, 205, 50, 0.637); */
+  color: var(--white-txt);
+}
+section.fields .text-heading {
+  height: 18rem;
+  width: 50%;
+  max-width: 50%;
+  margin-bottom: 6rem;
+}
+.text-heading .intro {
+  color: var(--accent-green-txt);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.text-heading .main {
+  color: var(--white-txt);
+  font-size: 5.2rem;
+  font-weight: 600;
+}
+.text-heading .main p {
+  line-height: 1.1;
+}
+section.fields .text-body {
+  width: 100%;
+  height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2.3rem;
+  /* background: grey; */
+}
+.text-body .each {
+  height: inherit;
+  background: var(--light-bg-clr);
+  border-radius: var(--rpt-border-radius);
+  padding: 4rem 3rem;
+}
+.text-body .each .number {
+  font-size: 3.5rem;
+  font-weight: 500;
+  display: grid;
+  place-items: center;
+  width: 9.2rem;
+  height: 9rem;
+  border-radius: 50%;
+  margin-bottom: 5.5rem;
+}
+.text-body .each .number.first {
+  background: rgb(235, 160, 23);
+}
+.text-body .each .number.second {
+  background: rgb(97, 49, 175);
+}
+.text-body .each .number.third {
+  background: rgb(18, 73, 136);
+}
+.text-body .each .each-heading {
+  color: var(--mid-light-txt);
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.text-body .each .each-body {
+  color: var(--light-txt);
+  font-size: 3.2rem;
+  font-weight: 450;
+  line-height: 3.7rem;
+  margin-bottom: 4rem;
+}
+.text-body .each .each-sub p {
+  display: inline-block;
+  color: var(--mid-light-txt);
+  font-size: 1.65rem;
+  cursor: pointer;
+}
+.text-body .each .each-sub i {
+  font-size: 1.6rem;
+  color: var(--mid-light-txt);
+  z-index: 3;
+  margin-left: 1.3rem;
+}
+.text-body .each .each-sub.first span {
+  color: var(--light-txt);
+  cursor: text;
+}
+section.projects {
+  width: 92%;
+  height: 160rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: yellowgreen; */
+  color: var(--white-txt);
+  margin-bottom: 20rem;
+}
+section.projects .each-project {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  max-width: inherit;
+  margin-bottom: 2rem;
+}
+.each-project .project-description {
+  width: 40%;
+  border-radius: 10px;
+  background: var(--light-bg-clr);
+  padding: 10rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.each-project .project-description .title {
+  margin-bottom: 3rem;
+}
+.each-project .project-description .title p {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--mid-light-txt);
+  position: relative;
+  letter-spacing: -0.5px;
+}
+.each-project .project-description .title span {
+  font-size: 2.5rem;
+  position: absolute;
+  top: -1.5rem;
+  /* left: 0.00001px; */
+}
+.each-project .project-description .body-description {
+  max-width: 95%;
+  font-size: 3.2rem;
+  font-weight: 450;
+  color: var(--white-txt);
+  margin-bottom: 2.3rem;
+  /* line-height: 1.5; */
+}
+.each-project .project-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.each-project .project-img img.gradient {
+  background-image: linear-gradient(90deg, #8f2df0, #ff934f);
+}
+.each-project .project-description .link button {
+  height: 6rem;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.each-project .project-description .link button.first {
+  background-color: var(--accent-green-txt);
+}
+.each-project .project-description .link button.second {
+  background-color: rgb(235, 160, 23);
+}
+.each-project .project-description .link button.third {
+  background-color: rgb(97, 49, 175);
+}
+section.companies {
+  width: 92%;
+  height: 45rem;
+  background: var(--light-bg-clr);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.companies .text-description {
+  width: 80%;
+  margin-bottom: 3rem;
+}
+section.companies .text-description p {
+  font-size: 4.2rem;
+  font-weight: 500;
+  color: var(--light-txt);
+}
+section.companies .text-description span {
+  color: var(--white-txt);
+}
+section.companies .company-logos {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.companies .company-logos img {
+  width: 15rem;
+  opacity: 0.5;
+}
+
+section.works {
+  width: 92%;
+  height: 55rem;
+  margin-top: -4.5rem;
+  /* background: tan; */
+}
+section.works .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2%;
+}
+section.works .cards .each-card {
+  border-radius: 10px;
+  background: var(--light-bg-clr);
+  height: 55rem;
+  position: relative;
+}
+section.works .cards .each-card .card-img {
+  margin-bottom: 2rem;
+}
+section.works .cards .each-card .card-img img {
+  width: 100%;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+section.works .each-card .card-text {
+  font-weight: 450;
+}
+section.works .each-card .card-text .intro {
+  font-size: 2.9rem;
+  padding: 0 2rem;
+  /* margin-bottom: 10rem; */
+}
+section.works .card-text .intro p:first-child {
+  color: var(--white-txt);
+  cursor: pointer;
+}
+section.works .card-text .intro p:last-child {
+  color: var(--light-txt);
+  cursor: pointer;
+}
+section.works .card-text .bottom-info {
+  width: 100%;
+  position: absolute;
+  bottom: 2.5rem;
+  padding: 0 2rem;
+}
+section.works .card-text .bottom-info p {
+  color: var(--light-txt);
+  font-size: 1.4rem;
+  vertical-align: baseline;
+  position: absolute;
+  bottom: 0.5rem;
+}
+section.works .card-text .bottom-info button {
+  background: var(--accent-green-txt);
+  color: var(--white-txt);
+  cursor: pointer;
+  font-size: 1.55rem;
+  font-weight: 550;
+  float: right;
+  padding: 0.8rem 1.3rem;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  vertical-align: baseline;
+}
+
+section.invitation {
+  /* background: rgba(210, 180, 140, 0.315); */
+  width: 92%;
+  height: 45rem;
+  margin-top: -7rem;
+}
+section.invitation div.invite {
+  width: 80%;
+  height: inherit;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+section.invitation div.invite .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+section.invitation div.invite .left p {
+  font-size: 7rem;
+  font-weight: 600;
+  color: var(--white-txt);
+  line-height: 1;
+}
+section.invitation div.invite .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  height: inherit;
+  max-width: 100%;
+  /* background: tan; */
+}
+section.invitation div.invite .right p {
+  font-size: 3rem;
+  font-weight: 450;
+  color: var(--light-txt);
+  margin-bottom: 2.8rem;
+}
+section.invitation div.invite .right .white {
+  color: var(--white-txt);
+}
+section.invitation div.invite .right button {
+  color: var(--white-txt);
+  cursor: pointer;
+  background: var(--accent-green-txt);
+  font-size: 1.6rem;
+  font-weight: 550;
+  padding: 2rem 3.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 180px;
+}
+section.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92%;
+  height: 33rem;
+  background: var(--light-bg-clr);
+  border-radius: var(--rpt-border-radius);
+  margin-bottom: 10rem;
+}
+section.footer div.foot {
+  width: 85%;
+  margin: em auto;
+  display: flex;
+  justify-content: space-between;
+}
+section.footer div.foot .left {
+  width: 30%;
+  max-width: 30%;
+}
+section.footer div.foot .left .logo {
+  margin-bottom: 1.8rem;
+}
+section.footer div.foot .left p:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 450;
+  color: var(--light-txt);
+  margin-bottom: 9rem;
+}
+section.footer div.foot .left .copyright {
+  color: var(--light-txt);
+  font-size: 1.5rem;
+}
+section.footer div.foot .right {
+  width: 23%;
+  max-width: 23%;
+}
+section.footer div.foot .right .navs {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14rem;
+}
+section.footer .right .navs ul li {
+  margin-bottom: 1rem;
+}
+section.footer .right .navs ul li a {
+  color: var(--light-txt);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+section.footer .right .navs ul li a.active,
+section.footer .right .navs ul li a:hover {
+  color: var(--white-txt);
+}
+section.footer .social-links {
+  color: var(--white-txt);
+  float: right;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+section.footer .social-links i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* Breakpoints and Media Queries */
+
+@media (max-width: 991px) {
+  .hamburger p {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  section.intro {
+    width: 60%;
+    margin: 7rem auto;
+  }
+  .wrapper-intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .text-desc {
+    width: 100%;
+  }
+  .text-desc .text-head {
+    text-align: center;
+  }
+  .text-desc .text-main {
+    width: 70%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  .text-desc .text-main p {
+    font-size: 5rem;
+  }
+  .text-desc .text-sub {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .intro-img img {
+    width: 90%;
+    height: 90%;
+  }
+  section.about {
+    margin-top: 28rem;
+    height: 50rem;
+  }
+  .text-wrapper {
+    display: block;
+    height: 80%;
+    margin: auto;
+  }
+  .left-text {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+  .left-text p {
+    font-size: 5.5rem;
+  }
+  .right-text {
+    width: 72%;
+  }
+  section.fields {
+    width: 60%;
+    margin: 7rem auto 90rem;
+  }
+  section.fields .text-heading {
+    width: 100%;
+    max-width: 100%;
+    height: 25rem;
+  }
+  .text-heading .main p {
+    max-width: 66%;
+  }
+
+  section.fields .text-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-body .each {
+    margin-bottom: 2rem;
+  }
+  section.projects {
+    width: 60%;
+    height: 240rem;
+    margin: 7rem auto 10rem;
+  }
+  section.projects .each-project {
+    flex-direction: column-reverse;
+    margin-bottom: 4rem;
+  }
+  .each-project .project-description {
+    width: 100%;
+    height: 40rem;
+    padding: 5rem 4rem;
+  }
+  .each-project .project-img {
+    margin-bottom: 2rem;
+  }
+  section.companies {
+    width: 60%;
+    height: 60rem;
+    margin: 0 auto 10rem;
+  }
+  section.companies .text-description {
+    margin-bottom: 5rem;
+  }
+  section.companies .text-description p {
+    font-size: 3.7rem;
+  }
+  section.companies .company-logos {
+    width: 60%;
+    margin-left: -11rem;
+  }
+  section.companies .company-logos img {
+    width: 15.6rem;
+    /*     margin-right: 7rem; */
+    margin-bottom: 2.5rem;
+  }
+  section.works {
+    width: 60%;
+    margin: 0 auto;
+    height: 100rem;
+  }
+  section.works .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  section.works .cards .each-card {
+    width: 46%;
+    height: 43rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+  }
+  section.works .card-text .bottom-info {
+    display: flex;
+    flex-direction: column;
+  }
+  section.works .card-text .bottom-info p {
+    position: unset;
+    margin-bottom: 1rem;
+  }
+  section.works .card-text .bottom-info button {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  section.invitation {
+    width: 60%;
+    margin: 0 auto;
+  }
+  section.invitation div.invite {
+    width: 70%;
+    height: 35rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  section.invitation div.invite .left {
+    align-items: start;
+  }
+  section.invitation div.invite .left p {
+    font-size: 6rem;
+  }
+
+  section.footer {
+    width: 94%;
+  }
+  section.footer div.foot .left {
+    width: 100%;
+    max-width: 100%;
+  }
+  section.footer div.foot .left p:nth-child(2) {
+    margin-bottom: 12rem;
+    max-width: 55%;
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat button {
+    display: none;
+  }
+  .hamburger p {
+    padding-left: 0;
+  }
+  section.intro {
+    width: 75%;
+  }
+  .left-text {
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+  .right-text {
+    width: 95%;
+  }
+  section.fields {
+    height: 50rem;
+    width: 75%;
+  }
+  .text-heading .main p {
+    max-width: 100%;
+    font-size: 4rem;
+  }
+  section.fields .text-body {
+    margin-top: -10rem;
+  }
+  section.projects {
+    width: 75%;
+    margin-bottom: 5rem;
+  }
+  section.companies {
+    height: 50rem;
+    width: 75%;
+  }
+  .each-project .project-description .link button {
+    height: 4.5rem;
+  }
+  section.companies .company-logos img {
+    width: 13rem;
+  }
+  section.companies .text-description p {
+    font-size: 3rem;
+  }
+  section.works {
+    width: 75%;
+    height: 165rem;
+  }
+  section.works .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  section.works .cards .each-card {
+    width: 70%;
+    height: 50rem;
+    margin: 1rem auto;
+  }
+  section.works .card-text .bottom-info button {
+    width: 38%;
+    font-size: 1.5rem;
+  }
+  section.invitation div.invite .left p {
+    font-size: 5.5rem;
+  }
+  section.invitation div.invite .right button {
+    padding: 1.5rem 3.5rem;
+  }
+  section.invitation {
+    width: 75%;
+    height: 35rem;
+  }
+  section.footer {
+    margin-bottom: 3rem;
+  }
+  section.footer div.foot {
+    width: 92%;
+  }
+  section.footer div.foot .right .navs {
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16rem;
+  }
+  section.footer div.foot .right {
+    width: 40%;
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 685px) {
+  .left-text {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  section.companies .company-logos {
+    width: 60%;
+    margin-left: -10rem;
+  }
+  section.fields {
+    height: 50rem;
+    width: 85%;
+  }
+  .text-heading .main p {
+    font-size: 3.9rem;
+  }
+  section.footer div.foot .right .navs {
+    margin-bottom: 18rem;
+  }
+}
+
+@media (max-width: 636px) {
+  section.companies .company-logos img {
+    width: 12rem;
+  }
+  section.footer {
+    height: 36rem;
+  }
+  section.footer div.foot .right .navs {
+    margin-bottom: 20rem;
+  }
+}
+
+@media (max-width: 600px) {
+  section.companies .company-logos {
+    width: 60%;
+    margin-left: -9rem;
+  }
+  section.companies .text-description p {
+    font-size: 2.8rem;
+  }
+  section.companies {
+    width: 90%;
+  }
+  section.works {
+    width: 100%;
+    height: 155rem;
+  }
+  section.invitation {
+    height: 45rem;
+  }
+  section.footer {
+    height: 38rem;
+  }
+  section.footer div.foot .left p:nth-child(2) {
+    max-width: 75%;
+    width: 75%;
+  }
+  section.footer div.foot .right .navs {
+    margin-bottom: 20rem;
+  }
+}
+
+@media (max-width: 555px) {
+  section.intro {
+    width: 95%;
+  }
+  section.projects {
+    width: 92%;
+  }
+  .each-project .project-description {
+    width: 100%;
+    height: 38rem;
+  }
+  section.invitation {
+    width: 90%;
+  }
+  section.footer div.foot .left p:nth-child(2) {
+    margin-bottom: 14rem;
+  }
+}
+
+@media (max-width: 498px) {
+  section.about {
+    margin-top: 18rem;
+    height: 55rem;
+  }
+  section.works .cards .each-card {
+    width: 90%;
+  }
+  section.works .card-text .bottom-info button {
+    width: 38%;
+    font-size: 1.35rem;
+  }
+  section.works .cards .each-card {
+    height: 50rem;
+  }
+  .each-project .project-description {
+    width: 100%;
+    height: 40rem;
+  }
+  .right-text p {
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+  }
+  section.invitation {
+    width: 100%;
+  }
+  section.footer div.foot .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.footer div.foot .right .navs {
+    align-items: end;
+    flex-direction: column;
+    margin-bottom: 16rem;
+  }
+  section.footer div.foot .right .navs .left-side,
+  section.footer div.foot .right .navs .right-side {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 462px) {
+  section.companies .company-logos img {
+    width: 13rem;
+  }
+  section.footer div.foot .left p:nth-child(2) {
+    margin-bottom: 14rem;
+  }
+  section.footer div.foot .left .copyright {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 432px) {
+  section.companies .text-description {
+    width: 90%;
+  }
+  section.companies .text-description p {
+    font-size: 2.6rem;
+  }
+  section.companies .company-logos {
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  section.footer .social-links {
+    flex-direction: column;
+  }
+  section.footer .social-links i {
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+  section.footer div.foot .right .navs {
+    margin-bottom: 8.5rem;
+  }
+  section.footer .social-links i:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 411px) {
+  .right-text p {
+    font-size: 1.85rem;
+    margin-bottom: 2.3rem;
+  }
+  section.invitation div.invite .left p {
+    font-size: 5.2rem;
+  }
+  section.invitation div.invite .right p {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .header-layer {
+    width: 85%;
+    min-width: 85%;
+  }
+  section.about {
+    margin-top: 0;
+  }
+  .text-desc .text-main p {
+    font-size: 4.5rem;
+  }
+  .text-desc .text-sub p {
+    font-size: 2.6rem;
+  }
+  .left-text p {
+    font-size: 4.7rem;
+  }
+  .right-text p {
+    font-size: 1.75rem;
+  }
+  .text-heading .main p {
+    font-size: 3.5rem;
+  }
+  .text-body .each .each-body {
+    font-size: 3rem;
+  }
+  .text-body .each .each-sub p {
+    font-size: 1.6rem;
+  }
+  .each-project .project-description {
+    height: 36rem;
+  }
+  .each-project .project-description .body-description {
+    max-width: 100%;
+    font-size: 2.6rem;
+  }
+  section.projects {
+    height: 220rem;
+    margin-bottom: -15rem;
+  }
+  section.companies .text-description p {
+    font-size: 2.4rem;
+  }
+  section.works .cards .each-card {
+    height: 46rem;
+  }
+  section.works .card-text .bottom-info button {
+    width: 45%;
+  }
+  section.invitation div.invite {
+    width: 80%;
+  }
+  section.invitation div.invite .left p {
+    font-size: 4.6rem;
+  }
+  section.invitation div.invite .right p {
+    font-size: 2.5rem;
+  }
+  section.footer {
+    height: 40rem;
+    margin-top: 2rem;
+  }
+  section.footer .social-links i {
+    color: var(--light-txt);
+  }
+  section.footer .social-links i:hover {
+    color: var(--white-txt);
+  }
+}
